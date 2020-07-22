@@ -37,6 +37,39 @@ namespace YetAnotherSoftwareBlog.CSharpCollections.Part1
             }
         }
 
+        public void ForEachCount()
+        {
+            var enumerable = new[] {1, 1, 2, 3, 5, 8, 13, 21};
+            var array = enumerable;
 
+            // Enumerable - O(n)
+            int count = 0;
+            foreach (var item in enumerable)
+            {
+                count++;
+            }
+
+            // Array - O(1)
+            count = array.Length;
+        }
+
+        public void ForEachFind()
+        {
+            var enumerable = new[] {1, 1, 2, 3, 5, 8, 13, 21};
+            var hashSet = new HashSet<int>(enumerable);
+
+            const int numberToFind = 13;
+            // Enumerable - O(n)
+            bool isFound = false;
+            int count = 0;
+            foreach (var item in enumerable)
+            {
+                if (item == numberToFind)
+                    isFound = true;
+            }
+
+            // HashSet - O(1)
+            isFound = hashSet.Contains(numberToFind);
+        }
     }
 }

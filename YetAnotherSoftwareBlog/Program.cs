@@ -1,4 +1,6 @@
 ﻿using System;
+using YetAnotherSoftwareBlog.CSharpCollections.Part4;
+
 
 namespace YetAnotherSoftwareBlog
 {
@@ -6,7 +8,9 @@ namespace YetAnotherSoftwareBlog
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var examples = new Examples();
+            examples.GetNthElementLinkedList();
+            Console.ReadLine();
         }
     }
 }
